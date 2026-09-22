@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="深夜食堂演员表查询：详细介绍日版及韩版深夜食堂的主要演员阵容、角色分配与剧情关联。提供演员作品介绍及角色背景解析。">
+    <meta name="keywords" content="深夜食堂演员表,深夜食堂演员,深夜食堂日版演员,深夜食堂韩版演员">
+    <title>深夜食堂演员表-日版韩版主要角色与主演阵容解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-body: #f9f7f2;
+            --bg-card: #ffffff;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --text-light: #999999;
+            --accent-color: #d35400;
+            --border-color: #e0e0e0;
+            --spacing-unit: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit * 2);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 64px;
+        }
+
+        .logo {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 14px;
+            color: var(--text-secondary);
+            font-weight: 500;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #3e2723 0%, #5d4037 100%);
+            color: #fff;
+            padding: 60px 0;
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .hero h1 {
+            font-size: 36px;
+            margin-bottom: 16px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 16px;
+            opacity: 0.9;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* Content Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 32px;
+            margin-bottom: 60px;
+        }
+
+        @media (max-width: 768px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 12px 0;
+                gap: 12px;
+            }
+            nav ul {
+                gap: 16px;
+                font-size: 13px;
+            }
+        }
+
+        /* Actor Table */
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent-color);
+        }
+
+        .actor-table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-card);
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .actor-table th, .actor-table td {
+            padding: 16px 20px;
+            text-align: left;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .actor-table th {
+            background-color: #fafafa;
+            color: var(--text-secondary);
+            font-weight: 600;
+            font-size: 14px;
+            width: 120px;
+        }
+
+        .actor-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .actor-table tr:hover {
+            background-color: #fffcf9;
+        }
+
+        .actor-name {
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        .actor-role {
+            color: var(--accent-color);
+            font-size: 14px;
+            margin-top: 4px;
+            display: block;
+        }
+
+        .actor-desc {
+            font-size: 13px;
+            color: var(--text-secondary);
+            max-width: 600px;
+        }
+
+        /* Sidebar */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 24px;
+        }
+
+        .sidebar-card {
+            background: var(--bg-card);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+        }
+
+        .sidebar-card h3 {
+            font-size: 16px;
+            margin-bottom: 12px;
+            color: var(--text-main);
+        }
+
+        .sidebar-card ul li {
+            margin-bottom: 8px;
+        }
+
+        .sidebar-card a {
+            font-size: 14px;
+            color: var(--text-secondary);
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .sidebar-card a:hover {
+            color: var(--accent-color);
+        }
+
+        .badge {
+            background: #eee;
+            color: #555;
+            font-size: 12px;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        .badge.hot {
+            background: #ffebee;
+            color: #c62828;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: var(--bg-card);
+            padding: 40px 0;
+            margin-top: 40px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            padding: 20px 0;
+            font-weight: 600;
+            font-size: 16px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 20px;
+            color: var(--text-light);
+        }
+
+        .faq-answer {
+            padding-bottom: 20px;
+            color: var(--text-secondary);
+            font-size: 14px;
+            display: none;
+            animation: fadeIn 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-5px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c2c2c;
+            color: #aaa;
+            padding: 40px 0;
+            text-align: center;
+            font-size: 13px;
+            margin-top: auto;
+        }
+
+        footer p {
+            margin-bottom: 8px;
+        }
+
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">深夜食堂<span>演员表</span></a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">演员表</a></li>
+                <li><a href="#">日版剧情</a></li>
+                <li><a href="#">韩版剧情</a></li>
+                <li><a href="#">角色解析</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<div class="hero">
+    <div class="container">
+        <h1>深夜食堂演员表</h1>
+        <p>探索日版与韩版经典剧集的主要演员阵容，了解那些温暖人心的角色与背后的故事。</p>
+    </div>
+</div>
+
+<main class="container">
+    <div class="main-layout">
+        <!-- Main Content: Actor List -->
+        <section class="content-area">
+            <h2 class="section-title">主要演员阵容</h2>
+            
+            <p style="margin-bottom: 20px; color: var(--text-secondary); font-size: 14px;">
+                《深夜食堂》改编自安倍夜郎的同名漫画，日版与韩版均由不同演员诠释，但都传递了关于食物、生活与人情的温暖主题。
+            </p>
+
+            <table class="actor-table">
+                <thead>
+                    <tr>
+                        <th>角色名</th>
+                        <th>饰演者</th>
+                        <th>备注/作品</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><div class="actor-name">小林薰</div><span class="actor-role">食堂老板</span></td>
+                        <td>小林薰</td>
+                        <td><span class="badge hot">日版主演</span><br>日本资深演员，以其独特的内敛演技赋予了老板温柔的灵魂。</td>
+                    </tr>
+                    <tr>
+                        <td><div class="actor-name">二宫和也</div><span class="actor-role">小寿司</span></td>
+                        <td>二宫和也</td>
+                        <td><span class="badge">日版主演</span><br>日本国民级偶像，凭借本剧展现了出色的演技跨度。</td>
+                    </tr>
+                    <tr>
+                        <td><div class="actor-name">小田切让</div><span class="actor-role">阿龙</span></td>
+                        <td>小田切让</td>
+                        <td><span class="badge">日版主演</span><br>以独特气质演绎了患有轻度自闭症的角色。</td>
+                    </tr>
+                    <tr>
+                        <td><div class="actor-name">松田龙平</div><span class="actor-role">阿胜</span></td>
+                        <td>松田龙平</td>
+                        <td><span class="badge">日版主演</span><br>与松田龙平合作，演绎了街舞少年的故事。</td>
+                    </tr>
+                    <tr>
+                        <td><div class="actor-name">原田知世</div><span class="actor-role">山内宗子</span></td>
+                        <td>原田知世</td>
+                        <td><span class="badge">日版主演</span><br>饰演经营酒吧的独立女性，知性优雅。</td>
+                    </tr>
+                    <tr>
+                        <td><div class="actor-name">玉木宏</div><span class="actor-role">山内宗子（青年）</span></td>
+                        <td>玉木宏</td>
+                        <td><span class="badge">日版主演</span><br>出演青年时期的山内宗子。</td>
+                    </tr>
+                    <tr>
+                        <td><div class="actor-name">李到晛</div><span class="actor-role">李桑</span></td>
+                        <td>李到晛</td>
+                        <td><span class="badge">韩版主演</span><br>韩国演员，饰演在食堂打工的年轻人。</td>
+                    </tr>
+                    <tr>
+                        <td><div class="actor-name">高庚杓</div><span class="actor-role">金东万</span></td>
+                        <td>高庚杓</td>
+                        <td><span class="badge">韩版主演</span><br>韩国演员，饰演拥有秘密过往的男性。</td>
+                    </tr>
+                    <tr>
+                        <td><div class="actor-name">李荷妮</div><span class="actor-role">金珠美</span></td>
+                        <td>李荷妮</td>
+                        <td><span class="badge">韩版主演</span><br>韩国女演员，饰演拥有悲惨过去的女主角。</td>
+                    </tr>
+                    <tr>
+                        <td><div class="actor-name">金成钧</div><span class="actor-role">李桑（青年）</span></td>
+                        <td>金成钧</td>
+                        <td><span class="badge">韩版主演</span><br>出演青年时期的李桑。</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <!-- Sidebar -->
+        <aside>
+            <div class="sidebar-card">
+                <h3>剧集版本</h3>
+                <ul>
+                    <li><a href="#">日版第一季</a></li>
+                    <li><a href="#">日版第二季</a></li>
+                    <li><a href="#">日版特别篇</a></li>
+                    <li><a href="#">韩版第一季</a></li>
+                    <li><a href="#">韩版第二季</a></li>
+                </ul>
+            </div>
+
+            <div class="sidebar-card">
+                <h3>热门角色</h3>
+                <ul>
+                    <li><a href="#">老板的料理秘籍</a> <span class="badge">热门</span></li>
+                    <li><a href="#">“三色鸡饭”背后的故事</a></li>
+                    <li><a href="#">“炒面面包”的情感羁绊</a></li>
+                    <li><a href="#">阿胜的街舞梦</a></li>
+                    <li><a href="#">金珠美的救赎之路</a></li>
+                </ul>
+            </div>
+        </aside>
+    </div>
+
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <h2 class="section-title">常见问题</h2>
+        
+        <div class="faq-item">
+            <div class="faq-question">日版和韩版《深夜食堂》的演员有重合吗？</div>
+            <div class="faq-answer">
+                <p>没有。日版和韩版是两个完全独立制作的版本，分别邀请了日本和韩国的顶尖演员阵容，故事背景和角色设定也有所不同。</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">小林薰在日版中饰演的角色叫什么名字？</div>
+            <div class="faq-answer">
+                <p>小林薰饰演的老板并没有具体的名字，他在剧中通常被称为“老板”或“大叔”，是这家深夜食堂的灵魂人物。</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-question">韩版《深夜食堂》的主演是谁？</div>
+            <div class="faq-answer">
+                <p>韩版《深夜食堂》由李到晛、高庚杓、李荷妮等主演，讲述了在首尔经营深夜食堂的故事。</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 深夜食堂演员表查询网. All Rights Reserved.</p>
+        <p>本站内容仅供学习交流，如涉及版权问题请联系删除。</p>
+    </div>
+</footer>
+
+<script>
+    // FAQ Toggle Logic
+    document.addEventListener('DOMContentLoaded', function() {
+        const faqItems = document.querySelectorAll('.faq-item');
+        
+        faqItems.forEach(item => {
+            const question = item.querySelector('.faq-question');
+            question.addEventListener('click', () => {
+                // Close other items
+                faqItems.forEach(otherItem => {
+                    if (otherItem !== item) {
+                        otherItem.classList.remove('active');
+                    }
+                });
+                // Toggle current item
+                item.classList.toggle('active');
+            });
+        });
+    });
+</script>
+
+</body>
+</html>
