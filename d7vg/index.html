@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="D7VG - 专注于高性能显卡（GPU）性能评测、硬件配置指南及驱动优化方案，为游戏玩家和专业创作者提供硬核技术支持。">
+    <meta name="keywords" content="D7VG, 显卡评测, GPU性能测试, 显卡驱动, 游戏显卡配置, 显卡天梯图">
+    <title>D7VG - 高性能显卡评测与驱动优化指南</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary: #00f2ea;
+            --primary-dark: #00a8b3;
+            --bg-dark: #0f172a;
+            --bg-card: #1e293b;
+            --text-main: #f1f5f9;
+            --text-muted: #94a3b8;
+            --accent-red: #ff4757;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Segoe UI', 'Microsoft YaHei', sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header & Nav */
+        header {
+            background: rgba(15, 23, 42, 0.95);
+            backdrop-filter: blur(10px);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary);
+            letter-spacing: 1px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: #fff;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary);
+        }
+
+        .search-btn {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--text-main);
+            padding: 8px 16px;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 80px 0;
+            text-align: center;
+            background: radial-gradient(circle at center, rgba(0, 242, 234, 0.1) 0%, transparent 70%);
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(to right, #fff, var(--primary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-muted);
+            max-width: 600px;
+            margin: 0 auto 40px;
+        }
+
+        .cta-group {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .btn {
+            padding: 12px 30px;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: var(--primary);
+            color: #000;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-2px);
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 1px solid var(--primary);
+            color: var(--primary);
+        }
+
+        .btn-outline:hover {
+            background: rgba(0, 242, 234, 0.1);
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 60px;
+            padding: 30px;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .stat-item h3 {
+            font-size: 2rem;
+            color: var(--primary);
+        }
+
+        .stat-item p {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Main Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 80px;
+        }
+
+        /* Article List */
+        .section-title {
+            font-size: 1.5rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .article-card {
+            background: var(--bg-card);
+            border-radius: 10px;
+            overflow: hidden;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: transform 0.3s;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            background: #2d3748;
+        }
+
+        .card-body {
+            padding: 25px;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            color: var(--primary);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .card-title {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+
+        .card-excerpt {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 0.95rem;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            padding-top: 15px;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .sidebar-widget h4 {
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .sidebar-list li {
+            margin-bottom: 12px;
+        }
+
+        .sidebar-list a {
+            display: flex;
+            justify-content: space-between;
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .sidebar-list a:hover {
+            color: var(--primary);
+        }
+
+        .sidebar-list span {
+            background: rgba(0, 242, 234, 0.1);
+            color: var(--primary);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        /* Hardware Table */
+        .hardware-section {
+            margin-bottom: 80px;
+        }
+
+        .table-container {
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: var(--bg-card);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        th, td {
+            padding: 15px 20px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        th {
+            background: rgba(0, 0, 0, 0.2);
+            color: var(--primary);
+            font-weight: 600;
+        }
+
+        td {
+            color: var(--text-muted);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        tr:hover td {
+            background: rgba(255, 255, 255, 0.02);
+            color: #fff;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: var(--bg-card);
+            padding: 60px 0;
+            border-radius: 12px;
+            margin-bottom: 80px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #fff;
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-muted);
+            display: none;
+            padding-left: 10px;
+            border-left: 2px solid var(--primary);
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background: #0b1120;
+            padding: 60px 0 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .stats-bar {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <div class="logo">
+                D7<span>VG</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">显卡评测</a></li>
+                    <li><a href="#">驱动下载</a></li>
+                    <li><a href="#">硬件DIY</a></li>
+                    <li><a href="#">论坛社区</a></li>
+                </ul>
+            </nav>
+            <button class="search-btn">搜索硬件</button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <h1>探索显卡性能的极限</h1>
+                <p>D7VG 提供最全面的 GPU 测试数据、驱动优化方案及装机指南，助您构建高性能计算平台。</p>
+                <div class="cta-group">
+                    <a href="#latest" class="btn btn-primary">查看最新评测</a>
+                    <a href="#guide" class="btn btn-outline">阅读装机指南</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Stats Bar -->
+        <div class="container">
+            <div class="stats-bar">
+                <div class="stat-item">
+                    <h3>500+</h3>
+                    <p>显卡型号评测</p>
+                </div>
+                <div class="stat-item">
+                    <h3>50TB</h3>
+                    <p>测试数据吞吐</p>
+                </div>
+                <div class="stat-item">
+                    <h3>100万+</h3>
+                    <p>装机用户信赖</p>
+                </div>
+                <div class="stat-item">
+                    <h3>24h</h3>
+                    <p>实时驱动更新</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Content Grid -->
+        <div class="container content-grid">
+            <!-- Left Column: Articles -->
+            <section class="main-content">
+                <div class="section-title">
+                    <span>最新评测文章</span>
+                    <a href="#" style="font-size: 0.9rem; color: var(--primary);">查看更多 &rarr;</a>
+                </div>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/gpu1/800/400" alt="RTX 5090 显卡评测" class="card-image">
+                    <div class="card-body">
+                        <span class="card-tag">深度评测</span>
+                        <h2 class="card-title">NVIDIA RTX 5090 深度评测：架构革新还是挤牙膏？</h2>
+                        <p class="card-excerpt">在 4K 光追游戏中，RTX 5090 表现如何？与上一代旗舰相比，能效比提升了多少？本文带来详细的跑分数据与功耗分析。</p>
+                        <div class="card-footer">
+                            <span>2023-10-24</span>
+                            <span>阅读: 12,450</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/gpu2/800/400" alt="AMD RX 7900 XTX 对比" class="card-image">
+                    <div class="card-body">
+                        <span class="card-tag">横向对比</span>
+                        <h2 class="card-title">AMD RX 7900 XTX 对比 NVIDIA RTX 4070 Ti：谁才是性价比之王？</h2>
+                        <p class="card-excerpt">针对 1440p 分辨率下的主流游戏，我们进行了长达 50 小时的压力测试，为您揭示两块显卡的实际差异。</p>
+                        <div class="card-footer">
+                            <span>2023-10-22</span>
+                            <span>阅读: 8,320</span>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="article-card">
+                    <img src="https://picsum.photos/seed/gpu3/800/400" alt="显卡驱动优化教程" class="card-image">
+                    <div class="card-body">
+                        <span class="card-tag">驱动优化</span>
+                        <h2 class="card-title">Windows 11 显卡驱动深度优化指南：释放 15% 的性能潜力</h2>
+                        <p class="card-excerpt">通过调整注册表和电源管理设置，让您的显卡在游戏中运行得更流畅。包含详细的步骤截图和回滚方案。</p>
+                        <div class="card-footer">
+                            <span>2023-10-20</span>
+                            <span>阅读: 5,670</span>
+                        </div>
+                    </div>
+                </article>
+            </section>
+
+            <!-- Right Column: Sidebar -->
+            <aside class="sidebar">
+                <!-- Trending Widget -->
+                <div class="sidebar-widget">
+                    <h4>热门话题</h4>
+                    <ul class="sidebar-list">
+                        <li><a href="#">显卡温度过高解决方案 <span>Hot</span></a></li>
+                        <li><a href="#">Intel Arc A770 显卡驱动更新 <span>News</span></a></li>
+                        <li><a href="#">2024年显卡选购避坑指南 <span>Guide</span></a></li>
+                        <li><a href="#">DLSS 3.5 技术原理解析 <span>Tech</span></a></li>
+                        <li><a href="#">NVIDIA 50系显卡传闻汇总 <span>Rumor</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- Download Widget -->
+                <div class="sidebar-widget">
+                    <h4>驱动下载</h4>
+                    <ul class="sidebar-list">
+                        <li><a href="#">NVIDIA GeForce 566.03 WHQL</a></li>
+                        <li><a href="#">AMD Adrenalin 24.1.1</a></li>
+                        <li><a href="#">Intel Graphics Command Center</a></li>
+                    </ul>
+                </div>
+
+                <!-- Ad Placeholder -->
+                <div class="sidebar-widget" style="text-align: center; background: #000; min-height: 200px; display: flex; align-items: center; justify-content: center; color: #333;">
+                    广告位 / Ad Space
+                </div>
+            </aside>
+        </div>
+
+        <!-- Hardware Table Section -->
+        <section class="container hardware-section" id="guide">
+            <div class="section-title">
+                <span>2024 显卡性能天梯图</span>
+            </div>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>排名</th>
+                            <th>型号</th>
+                            <th>显存容量</th>
+                            <th>价格区间</th>
+                            <th>适合用途</th>
+                            <th>性能评分</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>1</td>
+                            <td>NVIDIA GeForce RTX 4090</td>
+                            <td>24GB GDDR6X</td>
+                            <td>¥15,000+</td>
+                            <td>4K/8K 渲染, 极致光追</td>
+                            <td>98</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>NVIDIA GeForce RTX 4080 Super</td>
+                            <td>16GB GDDR6X</td>
+                            <td>¥8,999</td>
+                            <td>4K 游戏, 专业创作</td>
+                            <td>92</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>AMD Radeon RX 7900 XTX</td>
+                            <td>24GB GDDR6</td>
+                            <td>¥7,999</td>
+                            <td>4K 游戏, 高刷电竞</td>
+                            <td>88</td>
+                        </tr>
+                        <tr>
+                            <td>4</td>
+                            <td>NVIDIA GeForce RTX 4070 Ti Super</td>
+                            <td>16GB GDDR6X</td>
+                            <td>¥6,499</td>
+                            <td>2K 高刷, 性价比首选</td>
+                            <td>82</td>
+                        </tr>
+                        <tr>
+                            <td>5</td>
+                            <td>AMD Radeon RX 7800 XT</td>
+                            <td>16GB GDDR6</td>
+                            <td>¥4,999</td>
+                            <td>2K 游戏, 主流装机</td>
+                            <td>78</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section class="container">
+            <div class="section-title">
+                <span>常见问题 (FAQ)</span>
+            </div>
+            <div class="faq-section">
+                <div class="faq-item">
+                    <div class="faq-question">D7VG 的评测数据是如何得出的？ <span>&#9660;</span></div>
+                    <div class="faq-answer">我们使用 4K 分辨率下的 10 款主流 3A 大作进行压力测试，结合 Time Spy 和 Fire Strike 等基准测试软件，确保数据的客观性和准确性。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">显卡驱动更新后游戏变卡怎么办？ <span>&#9660;</span></div>
+                    <div class="faq-answer">新驱动有时会出现兼容性问题。建议先尝试在驱动设置中关闭“游戏优化”功能，或者回退到上一个稳定版本的驱动。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何判断我的电源是否足够？ <span>&#9660;</span></div>
+                    <div class="faq-answer">通常建议电源功率为显卡额定功率的 1.5 到 2 倍。例如 RTX 4090 需要至少 1000W 的优质电源。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">AMD 显卡和 NVIDIA 显卡在价格和性能上有什么区别？ <span>&#9660;</span></div>
+                    <div class="faq-answer">NVIDIA 在光追性能和软件生态（如 DLSS、CUDA）上通常占优，但价格较高；AMD 在传统光栅化性能和显存容量上性价比更高，适合追求高刷的玩家。</div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <div class="logo" style="margin-bottom: 20px;">D7<span>VG</span></div>
+                    <p>专注于为硬件发烧友和游戏玩家提供最专业、最及时的显卡资讯与评测服务。我们相信，每一分性能提升都值得被看见。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>栏目导航</h4>
+                    <ul>
+                        <li><a href="#">显卡评测</a></li>
+                        <li><a href="#">驱动下载</a></li>
+                        <li><a href="#">硬件天梯图</a></li>
+                        <li><a href="#">装机教程</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">团队介绍</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">广告合作</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">Bilibili 专栏</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 D7VG Hardware. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Sticky Header Shadow on Scroll
+            const header = document.querySelector('header');
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 10) {
+                    header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.5)';
+                } else {
+                    header.style.boxShadow = 'none';
+                }
+            });
+        });
+    </script>
+</body>
+  </html>
