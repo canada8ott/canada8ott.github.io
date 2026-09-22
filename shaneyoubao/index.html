@@ -1,0 +1,710 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="善恶有报-传统文化中的因果律与人生哲学。探讨善恶报应的深层含义、历史典故、现实案例及如何践行善行，为您解析命运与因果的智慧。">
+    <meta name="keywords" content="善恶有报,因果律,传统文化,人生哲学,道德修养,因果故事">
+    <title>善恶有报-传统文化因果律与人生哲学解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B4513;
+            --primary-dark: #5D2906;
+            --secondary-color: #F4A460;
+            --text-main: #333333;
+            --text-light: #666666;
+            --bg-body: #FDFBF7;
+            --bg-card: #FFFFFF;
+            --border-color: #E0D6CC;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            background-color: var(--bg-body);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-card);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 24px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .header-actions button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 14px;
+            transition: background 0.3s;
+        }
+
+        .header-actions button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('https://picsum.photos/seed/balance/1600/600') no-repeat center center/cover;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: white;
+            padding: 0 20px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 20px;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            opacity: 0.9;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: var(--primary-dark);
+            padding: 12px 30px;
+            border-radius: 30px;
+            font-weight: bold;
+            font-size: 18px;
+            transition: transform 0.2s, background 0.3s;
+        }
+
+        .hero-btn:hover {
+            transform: translateY(-2px);
+            background-color: #FFB366;
+        }
+
+        /* Core Philosophy Section */
+        .philosophy {
+            padding: 60px 0;
+            background-color: var(--bg-body);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 32px;
+            color: var(--primary-dark);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        .philosophy-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .philo-card {
+            background: var(--bg-card);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+            border-top: 4px solid var(--secondary-color);
+            text-align: center;
+        }
+
+        .philo-card h3 {
+            margin-bottom: 15px;
+            font-size: 20px;
+        }
+
+        .philo-card p {
+            color: var(--text-light);
+            font-size: 15px;
+        }
+
+        /* Case Studies Section */
+        .cases {
+            padding: 60px 0;
+            background-color: #FFF;
+        }
+
+        .case-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .case-card {
+            background: var(--bg-body);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .case-img {
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+        }
+
+        .case-content {
+            padding: 25px;
+        }
+
+        .case-tag {
+            display: inline-block;
+            background-color: #E8F0FE;
+            color: #1E88E5;
+            font-size: 12px;
+            padding: 4px 8px;
+            border-radius: 4px;
+            margin-bottom: 10px;
+        }
+
+        .case-content h3 {
+            font-size: 20px;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .case-content p {
+            color: var(--text-light);
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-size: 14px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.2s;
+        }
+
+        .read-more:hover::after {
+            margin-left: 10px;
+        }
+
+        /* Interactive Section */
+        .interactive {
+            padding: 60px 0;
+            background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+            color: white;
+        }
+
+        .interactive-container {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .interactive-text {
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .interactive-text h2 {
+            font-size: 32px;
+            margin-bottom: 20px;
+        }
+
+        .interactive-text p {
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .interactive-form {
+            flex: 1;
+            min-width: 300px;
+            background: rgba(255,255,255,0.1);
+            backdrop-filter: blur(10px);
+            padding: 30px;
+            border-radius: 12px;
+        }
+
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+        }
+
+        .form-group select, .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border-radius: 6px;
+            border: none;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            height: 100px;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 12px;
+            background-color: var(--secondary-color);
+            color: var(--primary-dark);
+            border: none;
+            border-radius: 6px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+
+        .submit-btn:hover {
+            background-color: #FFB366;
+        }
+
+        /* FAQ Section */
+        .faq {
+            padding: 60px 0;
+            background-color: var(--bg-body);
+        }
+
+        .faq-item {
+            background: var(--bg-card);
+            border-radius: 8px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-dark);
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-light);
+            font-size: 15px;
+            border-top: 1px solid transparent;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 20px;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .faq-icon {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2C2C2C;
+            color: #CCC;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 18px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .footer-bottom {
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .philosophy-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">
+                <span>☯</span> 善恶有报
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#philosophy">因果哲学</a></li>
+                    <li><a href="#cases">经典案例</a></li>
+                    <li><a href="#interactive">命运测算</a></li>
+                    <li><a href="#faq">常见问答</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button>加入社区</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>探知命运背后的因果律</h1>
+                <p>善恶有报不仅是传统文化中的智慧，更是现代生活的行为准则。了解因果，改变命运，从每一次选择开始。</p>
+                <a href="#cases" class="hero-btn">阅读经典故事</a>
+            </div>
+        </section>
+
+        <section id="philosophy" class="philosophy">
+            <div class="container">
+                <div class="section-title">
+                    <h2>善恶有报的深层哲学</h2>
+                    <p>探究因果律在人生中的体现与意义</p>
+                </div>
+                <div class="philosophy-grid">
+                    <article class="philo-card">
+                        <h3>因果不虚</h3>
+                        <p>因果是宇宙运行的底层逻辑，善因得善果，恶因得恶果，这是一种客观的自然规律，不以人的意志为转移。</p>
+                    </article>
+                    <article class="philo-card">
+                        <h3>当下即是</h3>
+                        <p>因果并非遥不可及，当下的每一个念头、每一句话、每一个行为，都在为未来种下种子。</p>
+                    </article>
+                    <article class="philo-card">
+                        <h3>自助者天助</h3>
+                        <p>真正的改变源于内心的觉悟。只有先修正自己的言行，才能吸引正向的能量和际遇。</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="cases" class="cases">
+            <div class="container">
+                <div class="section-title">
+                    <h2>历史与生活中的印证</h2>
+                    <p>通过真实的故事理解善恶有报的智慧</p>
+                </div>
+                <div class="case-grid">
+                    <article class="case-card">
+                        <img src="https://picsum.photos/seed/temple/400/250" alt="古刹祈福" class="case-img">
+                        <div class="case-content">
+                            <span class="case-tag">历史典故</span>
+                            <h3>六尺巷的故事</h3>
+                            <p>清代张英处理邻里宅基地纠纷的故事，展示了以退为进、宽容大度最终化解恩怨的智慧，体现了德行带来的安宁。</p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+                    <article class="case-card">
+                        <img src="https://picsum.photos/seed/garden/400/250" alt="庭院深深" class="case-img">
+                        <div class="case-content">
+                            <span class="case-tag">现实启示</span>
+                            <h3>诚信经营的长久之道</h3>
+                            <p>许多百年老店之所以能屹立不倒，核心在于始终坚守诚信待客的原则，这种商业道德最终回馈了企业的长远发展。</p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+                    <article class="case-card">
+                        <img src="https://picsum.photos/seed/river/400/250" alt="流水不息" class="case-img">
+                        <div class="case-content">
+                            <span class="case-tag">因果循环</span>
+                            <h3>勿以恶小而为之</h3>
+                            <p>生活中许多不良习惯的积累，往往源于微小的恶念。探讨如何及时止损，斩断负面因果的连锁反应。</p>
+                            <a href="#" class="read-more">阅读全文</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section id="interactive" class="interactive">
+            <div class="container interactive-container">
+                <div class="interactive-text">
+                    <h2>反思与修行</h2>
+                    <p>善恶有报不仅是观察他人的视角，更是审视自我的镜子。在这个快节奏的时代，我们更需要停下脚步，思考自己的行为对周围环境的影响。</p>
+                    <p>无论是职场竞争还是家庭生活，保持一颗向善的心，往往能带来意想不到的转机。善行不分大小，积少成多，终能汇聚成改变命运的洪流。</p>
+                </div>
+                <div class="interactive-form">
+                    <h3>提交您的感悟</h3>
+                    <p style="font-size:13px; margin-bottom:15px; opacity:0.8;">分享您身边的善行或对因果的理解</p>
+                    <form onsubmit="event.preventDefault(); alert('感谢您的分享，善念已传递。');">
+                        <div class="form-group">
+                            <label>您的身份</label>
+                            <select>
+                                <option>普通市民</option>
+                                <option>企业管理者</option>
+                                <option>教育工作者</option>
+                                <option>其他</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>分享内容</label>
+                            <textarea placeholder="请输入您的感悟或经历..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">提交感悟</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                    <p>关于善恶有报与因果律的疑问</p>
+                </div>
+                <div class="faq-list">
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            做了坏事但没有被立刻发现，会有报应吗？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            因果报应并不一定表现为即时的惩罚。有些恶果可能在很久之后才显现，或者通过内心不安、家庭不和、事业受阻等间接形式体现。种瓜得瓜，种豆得豆，时间的长短取决于因果的成熟度。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            善行是为了得到回报吗？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            真正的善行应当发自内心，不求回报。如果行善是为了交换回报，那么这就变成了一种交易，而非纯粹的善。然而，行善通常能带来内心的平静和良好的社会关系，这本身就是一种美好的回报。
+                        </div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">
+                            如何在复杂的现代社会中保持向善？
+                            <span class="faq-icon">▼</span>
+                        </div>
+                        <div class="faq-answer">
+                            在现代社会，保持向善需要智慧和定力。这包括在法律和道德的框架内行事，保持对他人的同理心，以及在利益面前坚守底线。通过不断的学习和反思，可以提升自己的道德判断力。
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 20px; display:inline-block;">
+                        <span>☯</span> 善恶有报
+                    </a>
+                    <p style="font-size: 14px; line-height: 1.8;">
+                        致力于弘扬传统文化中的因果智慧，帮助现代人建立正确的价值观和行为准则，共创和谐美好的社会环境。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>栏目导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">因果哲学</a></li>
+                        <li><a href="#">经典故事</a></li>
+                        <li><a href="#">修行指南</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关主题</h4>
+                    <ul>
+                        <li><a href="#">传统文化</a></li>
+                        <li><a href="#">道德修养</a></li>
+                        <li><a href="#">心灵成长</a></li>
+                        <li><a href="#">社区互助</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>邮箱：contact@shanebao.com</li>
+                        <li>电话：400-123-4567</li>
+                        <li>地址：文化大道因果里88号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 善恶有报文化网 版权所有. 本站内容仅供学习与交流，不构成任何投资或行为建议。</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth Scroll for Navigation
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
