@@ -1,0 +1,848 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>黑龙江招生考试信息网 - 黑龙江省教育考试院官方发布平台</title>
+    <meta name="description" content="黑龙江招生考试信息网是黑龙江省教育考试院官方指定的招生考试信息发布平台，提供高考、成考、自考、研招、专升本等各类考试报名、成绩查询、政策解读及院校资讯服务。">
+    <meta name="keywords" content="黑龙江招生考试信息网,黑龙江高考,黑龙江成考,黑龙江自考,黑龙江研招,黑龙江专升本,黑龙江教育考试院">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --primary-dark: #004494;
+            --accent-color: #e63946;
+            --text-main: #333333;
+            --text-secondary: #666666;
+            --bg-body: #f4f6f9;
+            --bg-white: #ffffff;
+            --border-color: #e0e0e0;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-main);
+            background-color: var(--bg-body);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* 顶部通栏 */
+        .top-bar {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 13px;
+            color: var(--text-secondary);
+            padding: 8px 0;
+        }
+
+        .top-bar .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .top-links a {
+            margin-left: 15px;
+            color: var(--text-secondary);
+        }
+
+        .top-links a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 头部区域 */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-main {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 0;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-icon {
+            width: 50px;
+            height: 50px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 24px;
+        }
+
+        .logo-text h1 {
+            font-size: 24px;
+            color: var(--primary-color);
+            font-weight: 700;
+            margin-bottom: 4px;
+        }
+
+        .logo-text p {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .search-box {
+            display: flex;
+            gap: 10px;
+            background: #f0f4f8;
+            padding: 5px;
+            border-radius: 4px;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            background: transparent;
+            padding: 8px;
+            outline: none;
+            font-size: 14px;
+        }
+
+        .search-box button {
+            background-color: var(--primary-color);
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 3px;
+            cursor: pointer;
+            font-weight: 500;
+        }
+
+        .search-box button:hover {
+            background-color: var(--primary-dark);
+        }
+
+        /* 导航栏 */
+        nav {
+            background-color: var(--primary-color);
+        }
+
+        .nav-list {
+            display: flex;
+            gap: 0;
+        }
+
+        .nav-item a {
+            display: block;
+            padding: 12px 20px;
+            color: white;
+            font-size: 15px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-item a:hover {
+            background-color: var(--primary-dark);
+        }
+
+        .nav-item a.active {
+            background-color: var(--accent-color);
+        }
+
+        /* 首屏公告 */
+        .notice-bar {
+            background-color: #fff8e1;
+            border-bottom: 1px solid #ffe082;
+            padding: 10px 0;
+        }
+
+        .notice-content {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            font-size: 14px;
+        }
+
+        .notice-label {
+            background-color: var(--accent-color);
+            color: white;
+            padding: 2px 8px;
+            border-radius: 2px;
+            font-weight: bold;
+            white-space: nowrap;
+        }
+
+        .notice-text {
+            flex: 1;
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .notice-text a:hover {
+            color: var(--primary-color);
+        }
+
+        /* 主要内容区 */
+        main {
+            padding: 30px 0;
+        }
+
+        /* 核心服务卡片 */
+        .service-grid {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+
+        .service-card {
+            background: white;
+            padding: 20px 15px;
+            text-align: center;
+            border-radius: 8px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.03);
+            transition: transform 0.2s, box-shadow 0.2s;
+            border-top: 3px solid transparent;
+            cursor: pointer;
+        }
+
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.08);
+            border-top-color: var(--primary-color);
+        }
+
+        .service-icon {
+            font-size: 28px;
+            margin-bottom: 10px;
+            display: block;
+        }
+
+        .service-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: var(--text-main);
+        }
+
+        /* 热点栏目 */
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            padding-left: 12px;
+            border-left: 5px solid var(--primary-color);
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .section-more {
+            font-size: 13px;
+            color: var(--text-secondary);
+            font-weight: 400;
+        }
+
+        .section-more a:hover {
+            color: var(--accent-color);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 3fr 2fr;
+            gap: 30px;
+        }
+
+        /* 左侧新闻列表 */
+        .news-list {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .news-item {
+            display: flex;
+            padding: 15px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .news-item:last-child {
+            border-bottom: none;
+        }
+
+        .news-date {
+            min-width: 70px;
+            text-align: center;
+            background-color: #f8f9fa;
+            padding: 5px;
+            border-radius: 4px;
+            margin-right: 15px;
+        }
+
+        .news-date .day {
+            font-size: 18px;
+            font-weight: bold;
+            color: var(--primary-color);
+            line-height: 1.2;
+        }
+
+        .news-date .month {
+            font-size: 12px;
+            color: var(--text-secondary);
+        }
+
+        .news-info h3 {
+            font-size: 16px;
+            margin-bottom: 5px;
+        }
+
+        .news-info h3 a:hover {
+            color: var(--primary-color);
+        }
+
+        .news-info p {
+            font-size: 13px;
+            color: var(--text-secondary);
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* 右侧侧边栏 */
+        aside {
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+
+        .widget {
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .widget-title {
+            font-size: 16px;
+            font-weight: 700;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+        }
+
+        .widget-title::before {
+            content: '';
+            display: inline-block;
+            width: 4px;
+            height: 16px;
+            background-color: var(--accent-color);
+            margin-right: 8px;
+        }
+
+        .rank-list li {
+            padding: 8px 0;
+            border-bottom: 1px dashed #eee;
+            display: flex;
+            align-items: center;
+        }
+
+        .rank-num {
+            width: 20px;
+            height: 20px;
+            line-height: 20px;
+            text-align: center;
+            border-radius: 50%;
+            font-size: 12px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .rank-list li:nth-child(1) .rank-num { background: #ff4d4f; color: white; }
+        .rank-list li:nth-child(2) .rank-num { background: #ff7a45; color: white; }
+        .rank-list li:nth-child(3) .rank-num { background: #ffc53d; color: white; }
+        .rank-list li:nth-child(4) .rank-num { background: #d9d9d9; color: white; }
+        .rank-list li:nth-child(5) .rank-num { background: #d9d9d9; color: white; }
+
+        .rank-link {
+            font-size: 14px;
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        /* 政策解读 */
+        .policy-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .policy-item {
+            display: flex;
+            align-items: flex-start;
+            font-size: 14px;
+            line-height: 1.5;
+        }
+
+        .policy-tag {
+            background-color: #e6f7ff;
+            color: var(--primary-color);
+            padding: 1px 6px;
+            border-radius: 3px;
+            margin-right: 8px;
+            font-size: 12px;
+            white-space: nowrap;
+        }
+
+        /* 院校展示 */
+        .college-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .college-card {
+            border: 1px solid #eee;
+            border-radius: 6px;
+            padding: 10px;
+            text-align: center;
+            transition: all 0.2s;
+        }
+
+        .college-card:hover {
+            border-color: var(--primary-color);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .college-name {
+            font-weight: 600;
+            font-size: 14px;
+            margin-bottom: 5px;
+        }
+
+        .college-type {
+            font-size: 12px;
+            color: var(--text-secondary);
+            background: #f0f0f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+        }
+
+        /* 底部 */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 50px 0 20px;
+            margin-top: 40px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1.5fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand h2 {
+            color: white;
+            font-size: 22px;
+            margin-bottom: 15px;
+        }
+
+        .footer-desc {
+            font-size: 14px;
+            line-height: 1.8;
+            max-width: 400px;
+        }
+
+        .footer-title {
+            color: white;
+            font-size: 16px;
+            margin-bottom: 20px;
+            font-weight: 600;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .contact-info p {
+            margin-bottom: 10px;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .copyright {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            text-align: center;
+            font-size: 13px;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 992px) {
+            .content-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+            .service-grid {
+                grid-template-columns: repeat(3, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-main {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .search-box {
+                max-width: 100%;
+            }
+            .nav-list {
+                flex-wrap: wrap;
+            }
+            .nav-item a {
+                padding: 10px 15px;
+                font-size: 14px;
+            }
+            .service-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            .college-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部信息栏 -->
+    <div class="top-bar">
+        <div class="container">
+            <span>欢迎访问黑龙江招生考试信息网！</span>
+            <div class="top-links">
+                <a href="#">设为首页</a>
+                <a href="#">收藏本站</a>
+                <a href="#">考生登录</a>
+                <a href="#">系统维护</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 头部 -->
+    <header>
+        <div class="container">
+            <div class="header-main">
+                <div class="logo">
+                    <div class="logo-icon">黑</div>
+                    <div class="logo-text">
+                        <h1>黑龙江招生考试信息网</h1>
+                        <p>黑龙江省教育考试院官方指定平台</p>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <input type="text" placeholder="请输入考试名称、院校名称或关键词...">
+                    <button type="button">搜索</button>
+                </div>
+            </div>
+        </div>
+        <!-- 导航 -->
+        <nav>
+            <div class="container">
+                <ul class="nav-list">
+                    <li class="nav-item"><a href="#" class="active">首页</a></li>
+                    <li class="nav-item"><a href="#">高考专题</a></li>
+                    <li class="nav-item"><a href="#">成考专升本</a></li>
+                    <li class="nav-item"><a href="#">自学考试</a></li>
+                    <li class="nav-item"><a href="#">研究生招生</a></li>
+                    <li class="nav-item"><a href="#">社会考试</a></li>
+                    <li class="nav-item"><a href="#">政策法规</a></li>
+                    <li class="nav-item"><a href="#">常见问题</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 公告栏 -->
+    <div class="notice-bar">
+        <div class="container">
+            <div class="notice-content">
+                <span class="notice-label">公告</span>
+                <div class="notice-text">
+                    <a href="#">关于做好2024年黑龙江省普通高等学校招生全国统一考试报名工作的通知</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 主体内容 -->
+    <main class="container">
+        
+        <!-- 核心服务入口 -->
+        <section class="service-grid">
+            <div class="service-card">
+                <span class="service-icon">🎓</span>
+                <div class="service-title">高考报名</div>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">📜</span>
+                <div class="service-title">成绩查询</div>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🏫</span>
+                <div class="service-title">院校查询</div>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">📘</span>
+                <div class="service-title">志愿填报</div>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">📝</span>
+                <div class="service-title">成考报名</div>
+            </div>
+            <div class="service-card">
+                <span class="service-icon">🛠</span>
+                <div class="service-title">自学考试</div>
+            </div>
+        </section>
+
+        <div class="content-grid">
+            <!-- 左侧：主要新闻资讯 -->
+            <section class="news-section">
+                <div class="section-title">
+                    <span>最新资讯</span>
+                    <a href="#" class="section-more">更多 &gt;</a>
+                </div>
+                <div class="news-list">
+                    <div class="news-item">
+                        <div class="news-date">
+                            <div class="day">15</div>
+                            <div class="month">10月</div>
+                        </div>
+                        <div class="news-info">
+                            <h3><a href="#">黑龙江省2024年普通高校招生录取工作结束</a></h3>
+                            <p>全省共录取普通高校考生24.5万人，录取率保持在较高水平，各项数据平稳有序...</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">
+                            <div class="day">14</div>
+                            <div class="month">10月</div>
+                        </div>
+                        <div class="news-info">
+                            <h3><a href="#">关于开展2025年成人高校招生全国统一考试报名的通知</a></h3>
+                            <p>报名时间为10月20日至10月25日，请广大考生登录黑龙江招生考试信息港进行报名...</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">
+                            <div class="day">12</div>
+                            <div class="month">10月</div>
+                        </div>
+                        <div class="news-info">
+                            <h3><a href="#">黑龙江省教育考试院关于普通高中学业水平合格性考试安排的公告</a></h3>
+                            <p>合格性考试将于11月中旬进行，具体考试时间、地点及准考证打印时间另行通知...</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">
+                            <div class="day">10</div>
+                            <div class="month">10月</div>
+                        </div>
+                        <div class="news-info">
+                            <h3><a href="#">2024年黑龙江省研究生招生考试报名须知</a></h3>
+                            <p>全国硕士研究生招生考试报名网上报名时间为10月15日至28日，逾期不再补报...</p>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <div class="news-date">
+                            <div class="day">08</div>
+                            <div class="month">10月</div>
+                        </div>
+                        <div class="news-info">
+                            <h3><a href="#">黑龙江省2024年自学考试新生报名入口开启</a></h3>
+                            <p>本次自学考试报名时间为10月1日至10月10日，请符合条件的社会考生及时报名...</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 右侧：侧边栏 -->
+            <aside>
+                <!-- 热门排行 -->
+                <div class="widget">
+                    <div class="widget-title">热门关注</div>
+                    <ul class="rank-list">
+                        <li>
+                            <span class="rank-num">1</span>
+                            <a href="#" class="rank-link">黑龙江省2024年普通高考录取分数线公布</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">2</span>
+                            <a href="#" class="rank-link">2025年考研报名常见问题解答</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">3</span>
+                            <a href="#" class="rank-link">2024年成人高考录取分数线</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">4</span>
+                            <a href="#" class="rank-link">黑龙江省普通高校招生计划</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">5</span>
+                            <a href="#" class="rank-link">自学考试免考政策解读</a>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- 政策解读 -->
+                <div class="widget">
+                    <div class="widget-title">政策解读</div>
+                    <div class="policy-list">
+                        <div class="policy-item">
+                            <span class="policy-tag">高考</span>
+                            <a href="#">关于调整普通高校招生体检工作指导意见的通知</a>
+                        </div>
+                        <div class="policy-item">
+                            <span class="policy-tag">专升本</span>
+                            <a href="#">黑龙江省普通高等学校专升本考试招生工作实施方案</a>
+                        </div>
+                        <div class="policy-item">
+                            <span class="policy-tag">研招</span>
+                            <a href="#">硕士研究生招生考试报名条件及资格审查要求</a>
+                        </div>
+                        <div class="policy-item">
+                            <span class="policy-tag">成考</span>
+                            <a href="#">成人高等学校招生全国统一考试考务工作规定</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 院校推荐 -->
+                <div class="widget">
+                    <div class="widget-title">黑龙江高校</div>
+                    <div class="college-grid">
+                        <div class="college-card">
+                            <div class="college-name">哈尔滨工业大学</div>
+                            <div class="college-type">理工类</div>
+                        </div>
+                        <div class="college-card">
+                            <div class="college-name">黑龙江大学</div>
+                            <div class="college-type">综合类</div>
+                        </div>
+                        <div class="college-card">
+                            <div class="college-name">哈尔滨工程大学</div>
+                            <div class="college-type">理工类</div>
+                        </div>
+                        <div class="college-card">
+                            <div class="college-name">东北林业大学</div>
+                            <div class="college-type">农林类</div>
+                        </div>
+                        <div class="college-card">
+                            <div class="college-name">哈尔滨医科大学</div>
+                            <div class="college-type">医药类</div>
+                        </div>
+                        <div class="college-card">
+                            <div class="college-name">黑龙江中医药大学</div>
+                            <div class="college-type">医药类</div>
+                        </div>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <h2>黑龙江招生考试信息网</h2>
+                    <p class="footer-desc">
+                        本网站由黑龙江省教育考试院主办，是全省招生考试信息发布、政策解读、考生咨询的唯一权威网络平台。我们致力于为广大考生提供及时、准确、全面的教育考试服务。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">快速导航</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">黑龙江教育考试院</a></li>
+                        <li><a href="#">全国普通高校招生</a></li>
+                        <li><a href="#">研究生招生信息网</a></li>
+                        <li><a href="#">中国高等教育学生信息网</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3 class="footer-title">考试分类</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">普通高考</a></li>
+                        <li><a href="#">成人高考</a></li>
+                        <li><a href="#">自学考试</a></li>
+                        <li><a href="#">研究生招生</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col contact-info">
+                    <h3 class="footer-title">联系我们</h3>
+                    <p>📞 咨询电话：0451-12345678</p>
+                    <p>📍 地址：黑龙江省哈尔滨市南岗区学府路74号</p>
+                    <p>⏰ 工作时间：周一至周五 9:00-12:00, 13:00-17:00</p>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2024 黑龙江招生考试信息网 版权所有 | 黑ICP备XXXXXXXX号</p>
+                <p style="margin-top: 8px; color: #7f8c8d;">本站信息仅供参考，具体政策请以黑龙江省教育考试院官方发布为准。</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
